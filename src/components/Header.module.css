@@ -1,0 +1,21 @@
+.header {
+  background-color: var(--gray-700);
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 0;
+}
+
+.img {
+  width: 5rem;
+  height: 6rem;
+  flex-shrink: 0;
+  padding: 1rem;
+}
+
+.headerName {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-left: 1rem;
+  align-self: center;
+}

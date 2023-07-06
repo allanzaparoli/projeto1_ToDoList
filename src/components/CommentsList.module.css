@@ -1,0 +1,50 @@
+.commentlist {
+  display: flex;
+  /* padding: 4rem 1.5rem; */
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: stretch;
+  border-radius: 0.5rem;
+  /* border: 1px solid var(--white); */
+}
+
+.commentlist header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+  /* border: 1px solid var(--white); */
+}
+
+.commentlist span {
+  color: var(--gray-200);
+  font-size: 1.5rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 1rem;
+}
+
+.commentlist em {
+color: var(--green-100);
+font-size: 1.5rem;
+font-family: Inter;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.resultcommentlist {
+  border-radius: 0.5rem;
+  border-top: 1px solid var(--gray-400);
+  display: flex;
+  padding: 4 rem 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  align-self: stretch;
+  margin-bottom: 1rem;
+}
