@@ -3,6 +3,7 @@ import styles from './Form.module.css';
 import { CommentsList } from './CommentsList';
 import { NotCommentsList } from './NotCommentsList';
 import { CommentsCounter } from './CommentsCounter';
+import plusButton from '../assets/plus-button.svg';
 
 export function Form() {
   const [comments, setComments] = useState([]);
@@ -62,7 +63,11 @@ export function Form() {
         />
 
         <footer>
-          <button type="submit" disabled={isNewCommentEmpty}>Criar</button>
+          <button type="submit" disabled={isNewCommentEmpty}>
+            Criar
+            {' '}
+            <img src={plusButton} alt="imagem" />
+          </button>
         </footer>
       </form>
       <div>

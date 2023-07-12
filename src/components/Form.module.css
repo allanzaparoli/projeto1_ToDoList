@@ -16,37 +16,30 @@
     border-radius: 8px;
     border: 1px solid var(--gray-700);
     background-color: var(--white);
-    /* color: var(--gray-300);
-    font-size: 1.5rem;
-    font-family: Inter;
-    line-height: 140%; */
     resize: none;
 }
 
 .form footer {
-  display: flex;
-  padding: 1rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  padding: 0.7rem;
   border-radius: 8px;
-  background-color: var(--blue-Dark);
+  background: var(--blue-Dark);
 }
 
 .form button[type="submit"] {
-    font-size: 0.875rem;
-    font-family: Inter;
-    font-weight: 700;
-    line-height: 1.4;
     display: flex;
-    padding: 1rem;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
+    color: var(--gray-100);
+    font-size: 1.5rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    padding: 0.5rem;
     background-color: var(--blue-Dark);
     border: 0;
-    color: var(--gray-100);
-    transition: filter 0.2s;
+}
+
+form img {
+  margin-left: 0.5rem;
 }
 
 .form button[type=submit]:not(disable):hover {
