@@ -16,10 +16,22 @@
   font-weight: 700;
   line-height: normal;
   margin-left: 1rem;
+  border-radius: 999px;
+  background: var(--gray-500);
+  padding: 2px 8px;
 }
 
-.CommentsCounter em {
+.tarefaCriada {
 color: var(--green-100);
+font-size: 1.5rem;
+font-family: Inter;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.concluidas {
+color: var(--purple);
 font-size: 1.5rem;
 font-family: Inter;
 font-style: normal;

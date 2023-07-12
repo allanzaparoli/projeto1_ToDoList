@@ -7,14 +7,14 @@ export function CommentsCounter({ comments }) {
   return (
     <header className={styles.CommentsCounter}>
       <div>
-        <em>Tarefa Criada</em>
+        <em className={styles.tarefaCriada}>Tarefa Criada</em>
         {' '}
         <span>{TOTAL_TASKS}</span>
       </div>
       <div>
-        <em>Tarefas concluídas</em>
+        <em className={styles.concluidas}>Concluídas</em>
         {' '}
-        <span>{`${FINISHED_TASKS} / ${TOTAL_TASKS}`}</span>
+        <span>{`${FINISHED_TASKS} de ${TOTAL_TASKS}`}</span>
       </div>
     </header>
   );
