@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import styles from './Form.module.css';
 import { CommentsList } from './CommentsList';
+import { NotCommentsList } from './NotCommentsList';
+import { CommentsCounter } from './CommentsCounter';
 
 export function Form() {
   const [comments, setComments] = useState([]);
@@ -10,8 +11,8 @@ export function Form() {
   const handleSubmit = (event) => {
     event.preventDefault();
     try {
-      const lastid = comments[comments.length - 1]?.id ?? 0;
-      setComments([...comments, { id: lastid + 1, content: newCommentText }]);
+      const lastId = comments[comments.length - 1]?.id ?? 0;
+      setComments([...comments, { id: lastId + 1, content: newCommentText, isChecked: false }]);
       setNewCommentText('');
     } catch (error) {
       alert('Erro ao criar nota');
@@ -36,12 +37,22 @@ export function Form() {
     }
   };
 
+  const handleCheckbox = (e, id) => {
+    const isTrue = e.target.checked;
+    const findComment = comments.find((comment) => comment.id === id);
+    const index = comments.indexOf(findComment);
+    const newComments = [...comments];
+    newComments[index].isChecked = isTrue;
+    setComments(newComments);
+  };
+
   const isNewCommentEmpty = newCommentText.length === 0;
 
   return (
     <article>
       <form onSubmit={handleSubmit} className={styles.form}>
-        <textarea
+        <input
+          type="text"
           name="Lista de tarefas"
           placeholder="Adicionar uma nova tarefa"
           value={newCommentText}
@@ -55,15 +66,22 @@ export function Form() {
         </footer>
       </form>
       <div>
-        {comments.map((comment, index) => (
-          <CommentsList
-            key={uuidv4}
-            id={comment.id}
-            index={index}
-            content={comment.content}
-            deleteComment={deleteComment}
-          />
-        ))}
+        <CommentsCounter comments={comments} />
+        {
+          comments.length > 0
+            ? comments.map((comment, index) => (
+              <CommentsList
+                key={comment.id}
+                id={comment.id}
+                index={index}
+                content={comment.content}
+                isChecked={comment.isChecked}
+                deleteComment={deleteComment}
+                handleCheckbox={handleCheckbox}
+              />
+            ))
+            : <NotCommentsList />
+        }
       </div>
     </article>
   );

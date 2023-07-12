@@ -3,8 +3,6 @@ import { Header } from './components/Header';
 import styles from './App.module.css';
 
 import './global.css';
-import { CommentsList } from './components/CommentsList';
-import { NotCommentsList } from './components/NotCommentsList';
 
 export function App() {
   return (
@@ -12,8 +10,6 @@ export function App() {
       <Header />
       <main>
         <Form />
-        <CommentsList />
-        <NotCommentsList />
       </main>
     </div>
   );

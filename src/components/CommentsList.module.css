@@ -1,50 +1,58 @@
-.commentlist {
-  display: flex;
-  /* padding: 4rem 1.5rem; */
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  align-items: stretch;
-  border-radius: 0.5rem;
-  /* border: 1px solid var(--white); */
-}
-
-.commentlist header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  align-self: stretch;
-  /* border: 1px solid var(--white); */
-}
-
-.commentlist span {
-  color: var(--gray-200);
-  font-size: 1.5rem;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-left: 1rem;
-}
-
-.commentlist em {
-color: var(--green-100);
-font-size: 1.5rem;
-font-family: Inter;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-}
-
 .resultcommentlist {
-  border-radius: 0.5rem;
-  border-top: 1px solid var(--gray-400);
   display: flex;
-  padding: 4 rem 1.5rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  padding: 1.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+  background: var(--gray-500);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+  margin: 2rem 0;
+  gap: 12px;
   align-self: stretch;
-  margin-bottom: 1rem;
+}
+
+.resultcommentlist img {
+  width: 3rem;
+  border: 0;
+  cursor: pointer;
+  background-color: var(--gray-500);
+}
+
+.resultcommentlist button {
+  border: 0;
+  cursor: pointer;
+  line-height: 0;
+  background: var(--gray-600);
+}
+
+.checklist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.checkboxRound {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  /* border: 1px solid #ddd; */
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkboxRound:checked {
+  background-color: var(--blue-Dark);
+  /* border: 1px solid var(--green-100); */
+}
+
+.linethrough {
+  text-decoration: line-through;
 }

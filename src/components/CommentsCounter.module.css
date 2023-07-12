@@ -1,0 +1,28 @@
+.CommentsCounter {
+  display: flex;
+  padding: 1rem 0;
+  justify-content:space-between;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  /* border: 1px solid var(--white); */
+  align-items:flex-start;
+}
+
+.CommentsCounter span {
+  color: var(--gray-200);
+  font-size: 1.5rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 1rem;
+}
+
+.CommentsCounter em {
+color: var(--green-100);
+font-size: 1.5rem;
+font-family: Inter;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
