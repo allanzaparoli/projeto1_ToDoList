@@ -21,7 +21,12 @@ export function CommentsList({
             checked={isChecked}
           />
 
-          <p className={isChecked ? styles.linethrough : styles.noline}>{content}</p>
+          <p className={isChecked
+            ? styles.linethrough : styles.noline}
+          >
+            {content}
+
+          </p>
         </div>
 
         <button onClick={handleDeleteComment} title="Deletar comentário" type="button">
